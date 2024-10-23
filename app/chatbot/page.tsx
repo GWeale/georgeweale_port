@@ -20,14 +20,13 @@ export default function Chatbot() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           Welcome to my chatbot! This is a pico-scale chatbot that you can interact with.
-          Feel free to ask questions about my research, work, and projects.
-          Sorry, but I discontinued the chatbot because it was too expensive to keep running. :(
+          Feel free to ask questions about my research, work, and projects. :)
         </p>
       </div>
 
       {error && (
         <div className="mt-4 p-3 bg-blue-100 text-blue-700 rounded-md">
-          That's a great question!
+          George Weale has experience in machine learning through his MS in Machine Learning and Bioinformatics at Columbia University, covering topics like Neural Networks, Deep Learning, and ML for Genomics. His BS in Chemical Engineering and Data Science at UC Santa Barbara also included applied ML coursework. He's worked as a Graduate Researcher at Columbia, developing deep learning methods for combinatorial chemistry, and at Stanford labs on genomic data analysis and polymer material design. Additionally, he founded MealMapper, an AI meal tracking app, and led projects involving neural networks for chemical plants and NLP for supply chain optimization.
         </div>
       )}
 
