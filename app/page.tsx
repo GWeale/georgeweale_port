@@ -27,7 +27,7 @@ export default function Page() {
         </p>
         <p>
           This portfolio includes some of the projects I am most proud of, and photos along the way. 
-          I built this website using Next.js, and Tailwind CSS,
+          I built this website using Next.js, and Tailwind CSS 
           <a
             target="_blank"
             href="https://github.com/GWeale/georgeweale_port"
