@@ -26,14 +26,13 @@ export default function Page() {
           I did my undergrad at the University of California, Santa Barbara where I got a BS in Chemical Engineering and a BS in Data Science and Statistics.
         </p>
         <p>
-          Nextfolio includes all the essentials for a stunning portfolio: SEO,
-          MDX support, RSS, Atom, & JSON feeds, analytics, tweet & YouTube
-          embeds, KaTeX integration, and{" "}
+          I made this portfolio to include some of the projects I am most proud of. 
+          I built this website using Next.js, and Tailwind CSS, shown 
           <a
             target="_blank"
-            href="https://github.com/1msirius/Nextfolio?tab=readme-ov-file#features"
+            href="https://github.com/GWeale/georgeweale_port"
           >
-            more
+            here
           </a>
           .
         </p>
