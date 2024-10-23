@@ -4,7 +4,7 @@ export const metaData = {
   name: "GW",
   ogImage: "/opengraph-image.png",
   description:
-    "A clean, fast, and lightweight portfolio template built with Next.js, Vercel, and Tailwind CSS for optimal performance.",
+    "My portfolio website :).",
 };
 
 export const socialLinks = {
