@@ -22,8 +22,8 @@ export default function Page() {
 
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          A clean, fast, and lightweight portfolio template built with Next.js,
-          Vercel, and Tailwind CSS for optimal performance.
+          I am currently a masters student at the Columbia University studying Machine Learning and Bioinformatics. 
+          I did my undergrad at the University of California, Santa Barbara where I got a BS in Chemical Engineering and a BS in Data Science and Statistics.
         </p>
         <p>
           Nextfolio includes all the essentials for a stunning portfolio: SEO,
