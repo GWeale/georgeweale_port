@@ -26,7 +26,7 @@ export default function Page() {
           I did my undergrad at the University of California, Santa Barbara where I got a BS in Chemical Engineering and a BS in Data Science and Statistics.
         </p>
         <p>
-          I made this portfolio to include some of the projects I am most proud of. 
+          This portfolio includes some of the projects I am most proud of, and photos along the way. 
           I built this website using Next.js, and Tailwind CSS, shown 
           <a
             target="_blank"
@@ -35,6 +35,17 @@ export default function Page() {
            here
           </a>
           .
+        </p>
+        <p>
+          I recently built a nano scale chatbot with (no API calls!) that you can interact with to ask about my research, work, and projects. Check it out
+          <a
+            target="_blank"
+            href="YOUR_CHATBOT_URL_HERE"
+            className="ml-1"
+          >
+            here
+          </a>
+          !
         </p>
       </div>
     </section>
