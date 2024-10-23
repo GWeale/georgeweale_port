@@ -23,7 +23,7 @@ export default function Chatbot() {
      <h1 className="mb-8 text-2xl font-medium tracking-tight">Chatbot</h1>
      <div className="prose prose-neutral dark:prose-invert">
        <p>
-         Welcome to my chatbot! This is a pico-scale chatbot that you can interact with.
+         Welcome to my chatbot! This is <a href="https://github.com/GWeale/ChatBot" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">my own pico-scale chatbot</a> that you can interact with.
          Feel free to ask questions about my research, work, and projects.
          Sorry, but I discontinued the chatbot because it was too expensive to keep running. :(
        </p>
