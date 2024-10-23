@@ -15,31 +15,31 @@ export default function Photos() {
         columns={3}
         images={[
           {
-            src: "/photos/photo1.jpg",
+            src: "/photos/photo1.png",
             alt: "First Big Sea Bass"
           },
           {
-            src: "/photos/photo2.jpg",
+            src: "/photos/photo2.png",
             alt: "Chem E's graduating"
           },
           {
-            src: "/photos/photo3.jpg",
+            src: "/photos/photo3.png",
             alt: "Senior Design Project Presentation"
           },
           {
-            src: "/photos/photo4.jpg",
+            src: "/photos/photo4.png",
             alt: "First arduino circuit"
           },
           {
-            src: "/photos/photo5.jpg",
+            src: "/photos/photo5.png",
             alt: "Professor Bowers!"
           },
           {
-            src: "/photos/photo6.jpg",
+            src: "/photos/photo6.png",
             alt: "Heavenly Ski Trip"
           },
           {
-            src: "/photos/photo7.jpg",
+            src: "/photos/photo7.png",
             alt: "Reactions Class"
           },
         ]}
