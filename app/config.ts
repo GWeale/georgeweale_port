@@ -14,7 +14,3 @@ export const socialLinks = {
   linkedin: "https://www.linkedin.com/georgeweale/",
   email: "mailto:gmw2143@gmail.com",
 };
-
-export const apiConfig = {
-  chatbotEndpoint: process.env.NEXT_PUBLIC_CHATBOT_API_ENDPOINT || 'http://localhost:3000/api/chat',
-};
