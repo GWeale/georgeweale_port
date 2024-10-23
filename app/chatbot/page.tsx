@@ -21,12 +21,13 @@ export default function Chatbot() {
         <p>
           Welcome to my chatbot! This is a pico-scale chatbot that you can interact with.
           Feel free to ask questions about my research, work, and projects.
+          Sorry, but I discontinued the chatbot because it was too expensive to keep running. :(
         </p>
       </div>
 
       {error && (
-        <div className="mt-4 p-3 bg-red-100 text-red-700 rounded-md">
-          {error}
+        <div className="mt-4 p-3 bg-blue-100 text-blue-700 rounded-md">
+          That's a great question!
         </div>
       )}
 
@@ -47,6 +48,15 @@ export default function Chatbot() {
           </button>
         </div>
       </form>
+
+      <div className="mt-8">
+        <h2 className="text-xl font-medium mb-4">Former Glory</h2>
+        <img 
+          src="/images/chatbot-screenshot.png" 
+          alt="It was so beautiful"
+          className="rounded-lg shadow-md w-full max-w-2xl"
+        />
+      </div>
     </section>
   );
 }
