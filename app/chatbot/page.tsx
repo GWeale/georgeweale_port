@@ -15,15 +15,6 @@ export default function Chatbot() {
           Welcome to my chatbot! This is a nano-scale GPT-2 based chatbot that you can interact with.
           Feel free to ask questions about my research, work, and projects.
         </p>
-        {/* Add your chatbot iframe or component here */}
-        <div className="mt-6">
-          <iframe
-            src="YOUR_CHATBOT_URL"
-            width="100%"
-            height="600px"
-            frameBorder="0"
-          ></iframe>
-        </div>
       </div>
     </section>
   );

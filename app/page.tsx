@@ -27,17 +27,18 @@ export default function Page() {
         </p>
         <p>
           This portfolio includes some of the projects I am most proud of, and photos along the way. 
-          I built this website using Next.js, and Tailwind CSS 
+          I built this website using Next.js, and Tailwind CSS, shown
           <a
             target="_blank"
             href="https://github.com/GWeale/georgeweale_port"
+            className="ml-1"
           >
             here
           </a>
           .
         </p>
         <p>
-          I recently built a nano scale chatbot with (no API calls!) that you can interact with to ask about my research, work, and projects. Check it out
+          I recently built a pico scale chatbot with (no API calls!) that you can interact with to ask about my research, work, and projects. Check it out
           <a
             target="_blank"
             href="YOUR_CHATBOT_URL_HERE"
