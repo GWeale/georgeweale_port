@@ -1,12 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Chatbot",
-  description: "My Chatbot",
-};
 
 export default function Chatbot() {
   const [message, setMessage] = useState("");
