@@ -11,7 +11,7 @@ export const projects: Project[] = [
     year: 2024,
     description:
       "Built a chatbot from scratch only using Pytorch and numpy. Trained on school cluster.",
-    url: "https://example.com/",
+    url: "https://georgeweale.com/chatbot",
   },
   {
     title: "MealMapper - Columbia Startup Lab",
