@@ -13,6 +13,7 @@ export default function Photos() {
       <h1 className="mb-8 text-2xl font-medium tracking-tight">Photos</h1>
       <ImageGrid
         columns={3}
+        showCaption={true}
         images={[
           {
             src: "/photos/photo1.png",
@@ -42,28 +43,6 @@ export default function Photos() {
             src: "/photos/photo7.png",
             alt: "Reactions Class"
           },
-        ]}
-      />
-
-      <ImageGrid
-        columns={2}
-        images={[
-          { src: "/photos/photo1.jpg", alt: "Roman columns" },
-          { src: "/photos/photo2.jpg", alt: "Big Ben" },
-          { src: "/photos/photo3.jpg", alt: "Sacré-Cœur Basilica" },
-          { src: "/photos/photo4.jpg", alt: "Eiffel Tower" },
-        ]}
-      />
-
-      <ImageGrid
-        columns={4}
-        images={[
-          { src: "/photos/photo1.jpg", alt: "Roman columns" },
-          { src: "/photos/photo2.jpg", alt: "Big Ben" },
-          { src: "/photos/photo3.jpg", alt: "Sacré-Cœur Basilica" },
-          { src: "/photos/photo4.jpg", alt: "Eiffel Tower" },
-          { src: "/photos/photo5.jpg", alt: "Taj Mahal" },
-          { src: "/photos/photo6.jpg", alt: "Colosseum" },
         ]}
       />
     </section>
