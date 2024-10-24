@@ -90,7 +90,7 @@ export const BackgroundText: React.FC = () => {
 
   `;
 
-  const repetitions = Array(100).fill(wallOfText); // Adjust the number as needed
+  const repetitions = Array(1).fill(wallOfText); // Adjust the number as needed
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
