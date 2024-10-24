@@ -175,3 +175,6 @@ body.image-expanded {
   @apply bg-white dark:bg-black rounded-lg shadow-lg p-6;
 }
 
+.content-background {
+  @apply bg-white dark:bg-black rounded-lg shadow-lg p-6;
+}
