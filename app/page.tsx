@@ -38,10 +38,10 @@ export default function Page() {
           .
         </p>
         <p>
-          I recently built a pico scale chatbot with (no API calls!) that you can interact with to ask about my research, work, and projects. Check it out
+          I recently built a pico scale chatbot wrapped in flask and hosted on AWS. Interact with it to learn about my research, work, and projects. Check it out
           <a
             target="_blank"
-            href="YOUR_CHATBOT_URL_HERE"
+            href="georgeweale.com/chatbot"
             className="ml-1"
           >
             here

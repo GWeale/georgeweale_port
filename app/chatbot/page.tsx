@@ -57,10 +57,10 @@ export default function Chatbot() {
 
 
      <div className="mt-8 flex flex-col items-center">
-       <h2 className="text-xl font-medium mb-4">Former Glory</h2>
+       <h2 className="text-xl font-medium mb-4">Example Output</h2>
        <img
          src="/photos/chatbot-screenshot.png"
-         alt="It was so beautiful"
+         alt=""
          className="rounded-lg shadow-md w-full max-w-2xl"
        />
      </div>
