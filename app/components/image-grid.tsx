@@ -26,14 +26,14 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
     <section>
       <div className={`grid ${gridClass} gap-4 my-8`}>
         {images.map((image, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="relative aspect-square w-full">
+          <div key={index} className="flex flex-col items-center group">
+            <div className="relative aspect-square w-full overflow-hidden rounded-lg">
               {image.href ? (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
                   href={image.href}
-                  className="block w-full h-full"
+                  className="block w-full h-full transform transition-transform duration-300 ease-in-out group-hover:scale-110"
                 >
                   <Image
                     alt={image.alt}
@@ -41,18 +41,20 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
                     fill
                     sizes="(max-width: 768px) 50vw, 33vw"
                     priority
-                    className="rounded-lg object-cover"
+                    className="rounded-lg object-cover transition-all duration-300 ease-in-out"
                   />
                 </a>
               ) : (
-                <Image
-                  alt={image.alt}
-                  src={image.src}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  priority
-                  className="rounded-lg object-cover"
-                />
+                <div className="transform transition-transform duration-300 ease-in-out group-hover:scale-110">
+                  <Image
+                    alt={image.alt}
+                    src={image.src}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    priority
+                    className="rounded-lg object-cover transition-all duration-300 ease-in-out"
+                  />
+                </div>
               )}
             </div>
             {showCaption && (
