@@ -203,3 +203,9 @@ body.image-expanded {
   inset: 0;
   z-index: -1; /* Ensure it stays behind other content */
 }
+
+.background-text {
+  color: rgba(0, 0, 0, 0.5); /* Example: Black text with 50% opacity */
+  /* Alternatively, use the opacity property */
+  opacity: 0.3; /* 50% opacity */
+}
