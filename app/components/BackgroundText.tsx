@@ -3,7 +3,7 @@
 import React from "react";
 
 export const BackgroundText: React.FC = () => {
-  const repetitions = Array(1000).fill("hi hello "); // Adjust the number as needed
+  const repetitions = Array(100).fill("hi hello "); // Adjust the number as needed
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -11,7 +11,7 @@ export const BackgroundText: React.FC = () => {
         {repetitions.map((text, index) => (
           <span
             key={index}
-            className="text-2xl font-light opacity-10 dark:text-white text-gray-300"
+            className="text-2xl font-light opacity-10 dark:text-gray-500 text-gray-700"
           >
             {text}
           </span>
