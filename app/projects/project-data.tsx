@@ -2,7 +2,8 @@ export interface Project {
   title: string;
   year: number;
   description: string;
-  url: string;
+  url?: string;
+  pdf?: string;
 }
 
 export const projects: Project[] = [
@@ -33,5 +34,19 @@ export const projects: Project[] = [
     description:
       "Developed a natural language processes system using tensorflow uses the existing cash registers to optimize store item placement and supply chain restocking, while reducing upfront costs by 200x than cloud business",
     url: "https://example.com/",
+  },
+  {
+    title: "Senior Design 2 - UCSB ",
+    year: 2024,
+    description:
+      "I developed a conceptual process design and conducted an analysis for a carbon-negative dimethyl carbonate (DMC) plant, including the evaluation of key equipment and economic factors. After optimizing the design, I identified potential profitability improvements, particularly by leveraging carbon credits in the European market.",
+    pdf: "/pdfs/DMCProduction.pdf",
+  },
+  {
+    title: "Senior Design 1 - UCSB ",
+    year: 2024,
+    description:
+      "I conducted a detailed techno-economic analysis for a profitable and carbon-neutral steam ethane cracker with an ethylene production rate of 200 kta, reaching Level 5 of the Douglas hierarchy of plant design. The analysis covered key systems, including distillation, reactor, and heat exchanger networks, with optimized conditions yielding favorable profitability metrics, particularly with the inclusion of a PSA system for hydrogen production.",
+    pdf: "/pdfs/ThermalCracking.pdf",
   },
 ];

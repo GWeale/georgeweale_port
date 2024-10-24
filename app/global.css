@@ -166,7 +166,6 @@ table {
   position: relative;
 }
 
-/* Add these styles for the image expansion effect */
 body.image-expanded {
   overflow: hidden;
 }
