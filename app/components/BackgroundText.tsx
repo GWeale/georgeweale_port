@@ -4,96 +4,9 @@ import React from "react";
 
 export const BackgroundText: React.FC = () => {
   const wallOfText = `
-"use client";
-import * as React from "react";
-import { useTheme } from "next-themes";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-import type { ThemeProviderProps } from "next-themes/dist/types";
-import { FaCircleHalfStroke } from "react-icons/fa6";
-
-const storageKey = 'theme-preference';
-
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return (
-    <NextThemesProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      {...props}
-    >
-      {children}
-    </NextThemesProvider>
-  );
-}
-
-export const ThemeSwitch: React.FC = () => {
-  const { setTheme } = useTheme();
-  const [mounted, setMounted] = React.useState(false);
-  const [currentTheme, setCurrentTheme] = React.useState<'light' | 'dark'>('light');
-
-  const getColorPreference = (): 'light' | 'dark' => {
-    if (typeof window !== 'undefined') {
-      const storedPreference = localStorage.getItem(storageKey);
-      if (storedPreference) {
-        return storedPreference as 'light' | 'dark';
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'light'; 
-  };
-
-  const reflectPreference = (theme: 'light' | 'dark') => {
-    document.documentElement.classList.remove('bg-light', 'bg-dark');
-    document.documentElement.classList.add();
-    setCurrentTheme(theme);
-    setTheme(theme);
-  };
-
-  React.useEffect(() => {
-    setMounted(true);
-    const initTheme = getColorPreference();
-    reflectPreference(initTheme);
-
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const handleChange = () => {
-      const newTheme = mediaQuery.matches ? 'dark' : 'light';
-      localStorage.setItem(storageKey, newTheme);
-      reflectPreference(newTheme);
-    };
-
-    mediaQuery.addEventListener('change', handleChange);
-
-    return () => mediaQuery.removeEventListener('change', handleChange);
-  }, [setTheme]);
-
-  const toggleTheme = () => {
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    localStorage.setItem(storageKey, newTheme);
-    reflectPreference(newTheme);
-  };
-
-  if (!mounted) {
-    return (
-      <FaCircleHalfStroke
-        className="h-[14px] w-[14px] text-[#1c1c1c]"
-        aria-hidden="true"
-      />
-    );
-  }
-
-  return (
-    <button
-      id="theme-toggle"
-      aria-label={}
-      onClick={toggleTheme}
-      className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90"
-    >
-      <FaCircleHalfStroke
-        className={}
-      />
-    </button>
-  );
-};
+"use client"; import * as React from "react"; import { useTheme } from "next-themes"; import { ThemeProvider as NextThemesProvider } from "next-themes"; import type { ThemeProviderProps } from "next-themes/dist/types"; import { FaCircleHalfStroke } from "react-icons/fa6"; const storageKey = 'theme-preference'; export function ThemeProvider({ children, ...props }: ThemeProviderProps) { return ( <NextThemesProvider attribute="class" defaultTheme="system" enableSystem {...props} > {children} </NextThemesProvider> ); } export const ThemeSwitch: React.FC = () => { const { setTheme } = useTheme(); const [mounted, setMounted] = React.useState(false); const [currentTheme, setCurrentTheme] = React.useState<'light' | 'dark'>('light'); const getColorPreference = (): 'light' | 'dark' => { if (typeof window !== 'undefined') { const storedPreference = localStorage.getItem(storageKey); if (storedPreference) { return storedPreference as 'light' | 'dark'; } return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } return 'light'; }; const reflectPreference = (theme: 'light' | 'dark') => { document.documentElement.classList.remove('bg-light', 'bg-dark'); document.documentElement.classList.add(); setCurrentTheme(theme); setTheme(theme); }; React.useEffect(() => { setMounted(true); const initTheme = getColorPreference(); reflectPreference(initTheme); const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)'); const handleChange = () => { const newTheme = mediaQuery.matches ? 'dark' : 'light'; localStorage.setItem(storageKey, newTheme); reflectPreference(newTheme); }; mediaQuery.addEventListener('change', handleChange); return () => mediaQuery.removeEventListener('change', handleChange); }, [setTheme]); const toggleTheme = () => { const newTheme = currentTheme === 'light' ? 'dark' : 'light'; localStorage.setItem(storageKey, newTheme); reflectPreference(newTheme); }; if (!mounted) { return ( <FaCircleHalfStroke className="h-[14px] w-[14px] text-[#1c1c1c]" aria-hidden="true" /> ); } return ( <button id="theme-toggle" aria-label={} onClick={toggleTheme} className="flex items-center justify-center transition-opacity duration-300 hover:opacity-90" > <FaCircleHalfStroke className={} /> </button> ); }; "use client"; import React, { useState } from "react"; import Image from "next/image"; interface ImageGridProps { images: { src: string; alt: string; href?: string; }[]; columns?: 2 | 3 | 4; showCaption?: boolean; } export const ImageGrid: React.FC<ImageGridProps> = ({ images, columns = 3, showCaption = false }) => { const [expandedIndex, setExpandedIndex] = useState<number | null>(null); const handleImageClick = (index: number) => { setExpandedIndex(expandedIndex === index ? null : index); }; return ( <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1500px] mx-auto relative"> {images.map((image, index) => ( <div key={index} className="relative"> <div className="relative aspect-[16/9] w-full cursor-pointer" onClick={() => handleImageClick(index)}> {expandedIndex === index ? ( <div className="fixed inset-0 z-50 flex items-center justify-center"> <div className="relative w-[90vw] h-[80vh] max-w-[1800px]"> <Image alt={image.alt} src={image.src} fill priority className="object-contain rounded-lg shadow-2xl" /> </div> </div> ) : ( <div className="relative h-full w-full"> <Image alt={image.alt} src={image.src} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className="rounded-lg object-cover transition-all duration-300 hover:opacity-90" /> </div> )} </div> {showCaption && !expandedIndex && ( <p className="mt-2 text-sm text-center text-neutral-600 dark:text-neutral-400"> {image.alt} </p> )} </div> ))} {expandedIndex !== null && ( <div className="fixed inset-0 bg-black/80 z-40 cursor-pointer" onClick={() => setExpandedIndex(null)} /> )} </div> ); }; "use client"; import React, { useState } from "react"; export default function Chatbot() { const [message, setMessage] = useState(""); const [error, setError] = useState(""); const handleSubmit = (e: React.FormEvent) => { e.preventDefault(); if (message.trim()) { setError("API is no longer connected. Please try again later."); setMessage(""); } }; return ( <section> <h1 className="mb-8 text-2xl font-medium tracking-tight">Chatbot</h1> <div className="prose prose-neutral dark:prose-invert"> <p> Welcome to my chatbot! This is <a href="https://github.com/GWeale/ChatBot" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-600">my own pico-scale chatbot</a> that you can interact with. Feel free to ask questions about my research, work, and projects. Sorry, but I discontinued the chatbot because it was too expensive to keep running. :( </p> </div> {error && ( <div className="mt-4 p-3 bg-red-100 text-red-700 rounded-md"> {error} </div> )} <form onSubmit={handleSubmit} className="mt-6"> <div className="flex gap-2"> <input type="text" value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Type your message here..." className="flex-1 p-2 border rounded-md bg-gray-100 dark
+dark
+" /> <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"> Send </button> </div> </form> <div className="mt-8 flex flex-col items-center"> <h2 className="text-xl font-medium mb-4">Example Output</h2> <img src="/photos/chatbot-screenshot.png" alt="" className="rounded-lg shadow-md w-full max-w-2xl" /> </div> </section> ); }
 
   `;
 
