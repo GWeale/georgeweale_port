@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
 import { ThemeProvider } from "./components/theme-switch";
 import { metaData } from "./config";
+import { BackgroundText } from "./components/BackgroundText";
 
 export const metadata: Metadata = {
   metadataBase: new URL(metaData.baseUrl),
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   },
 };
 
-const cx = (...classes) => classes.filter(Boolean).join(" ");
+const cx = (...classes: string[]) => classes.filter(Boolean).join(" ");
 
 export default function RootLayout({
   children,
@@ -74,14 +75,15 @@ export default function RootLayout({
           title="JSON Feed"
         />
       </head>
-      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40">
+      <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40 relative">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[640px] w-full">
+          <BackgroundText />
+          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[640px] w-full z-10">
             <Navbar />
             {children}
             <Footer />
