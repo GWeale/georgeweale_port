@@ -18,7 +18,7 @@ export default function Projects() {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="block group hover:opacity-80 transition-opacity duration-200"
+            className="block transition-opacity duration-200"
           >
             <div className="flex flex-col">
               <div className="w-full flex justify-between items-baseline">
