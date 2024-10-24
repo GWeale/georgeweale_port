@@ -177,3 +177,19 @@ body.image-expanded {
 .content-background {
   @apply bg-white dark:bg-black rounded-lg shadow-lg p-6;
 }
+
+.dark-container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the container */
+  background-color: rgba(18, 18, 18, 0.9); /* Dark background with some transparency */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Maintain existing navigation tabs and header styling but contained within the dark wrapper */
+.dark-container .navbar,
+.dark-container .header {
+  /* Add any specific styles needed to maintain existing styling */
+}
