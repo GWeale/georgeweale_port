@@ -193,3 +193,13 @@ body.image-expanded {
 .dark-container .header {
   /* Add any specific styles needed to maintain existing styling */
 }
+
+.background-overlay {
+  background-color: rgba(18, 18, 18, 0.9); /* Dark background with some transparency */
+  /* You can use a different color for light mode if needed */
+  /* For example, use a lighter color for light mode */
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* Ensure it stays behind other content */
+}
