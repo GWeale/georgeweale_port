@@ -36,6 +36,7 @@
 
 html {
   min-width: 360px;
+  scroll-behavior: smooth;
 }
 
 .prose {
@@ -163,4 +164,9 @@ table {
 .group:hover .group-hover\:z-50 {
   z-index: 50;
   position: relative;
+}
+
+/* Add these styles for the image expansion effect */
+body.image-expanded {
+  overflow: hidden;
 }
