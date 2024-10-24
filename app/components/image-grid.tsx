@@ -17,12 +17,10 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
   showCaption = false, // Default to false for backward compatibility
 }) => {
   return (
-    <div
-      className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-${columns} gap-4`}
-    >
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1500px] mx-auto">
       {images.map((image, index) => (
-        <div key={index} className="flex flex-col items-center">
-          <div className="relative aspect-square w-full overflow-hidden rounded-lg">
+        <div key={index} className="group relative">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-lg">
             {image.href ? (
               <a
                 target="_blank"
@@ -30,24 +28,24 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
                 href={image.href}
                 className="block w-full h-full"
               >
-                <div className="transform transition-all duration-300 hover:scale-110 h-full">
+                <div className="transform transition-all duration-300 group-hover:scale-[2] group-hover:z-50 origin-center h-full">
                   <Image
                     alt={image.alt}
                     src={image.src}
                     fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority
                     className="rounded-lg object-cover"
                   />
                 </div>
               </a>
             ) : (
-              <div className="transform transition-all duration-300 hover:scale-110 h-full">
+              <div className="transform transition-all duration-300 group-hover:scale-[2] group-hover:z-50 origin-center h-full">
                 <Image
                   alt={image.alt}
                   src={image.src}
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
                   className="rounded-lg object-cover"
                 />
