@@ -152,7 +152,7 @@ table {
 }
 
 /* Add these styles to handle the image hover effect */
-.group:hover::after {
+.group:hover:not(.no-darken)::after {
   content: '';
   position: fixed;
   inset: 0;
