@@ -20,52 +20,57 @@ export const ImageGrid: React.FC<ImageGridProps> = ({
 }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
+  const handleImageClick = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1500px] mx-auto relative">
       {images.map((image, index) => (
-        <div 
-          key={index} 
-          className="relative"
-          onMouseEnter={() => setExpandedIndex(index)}
-          onMouseLeave={() => setExpandedIndex(null)}
-        >
-          <div className="relative aspect-[16/9] w-full overflow-visible rounded-lg">
-            <div 
-              className={`
-                absolute transition-all duration-300 ease-in-out rounded-lg
-                ${expandedIndex === index ? 
-                  'fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vh] z-50' : 
-                  'w-full h-full'
-                }
-              `}
-            >
-              <Image
-                alt={image.alt}
-                src={image.src}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                priority
-                className={`
-                  rounded-lg object-cover transition-all duration-300
-                  ${expandedIndex === index ? 'shadow-2xl' : ''}
-                `}
-              />
-            </div>
+        <div key={index} className="relative">
+          <div 
+            className="relative aspect-[16/9] w-full cursor-pointer"
+            onClick={() => handleImageClick(index)}
+          >
+            {expandedIndex === index ? (
+              // Expanded view (fixed position, centered)
+              <div className="fixed inset-0 z-50 flex items-center justify-center">
+                <div className="relative w-[90vw] h-[80vh] max-w-[1800px]">
+                  <Image
+                    alt={image.alt}
+                    src={image.src}
+                    fill
+                    priority
+                    className="object-contain rounded-lg shadow-2xl"
+                  />
+                </div>
+              </div>
+            ) : (
+              // Grid view
+              <div className="relative h-full w-full">
+                <Image
+                  alt={image.alt}
+                  src={image.src}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority
+                  className="rounded-lg object-cover transition-all duration-300 hover:opacity-90"
+                />
+              </div>
+            )}
           </div>
-          {showCaption && (
-            <p className={`
-              mt-2 text-sm text-center text-neutral-600 dark:text-neutral-400
-              ${expandedIndex === index ? 'opacity-0' : 'opacity-100'}
-              transition-opacity duration-300
-            `}>
+          {showCaption && !expandedIndex && (
+            <p className="mt-2 text-sm text-center text-neutral-600 dark:text-neutral-400">
               {image.alt}
             </p>
           )}
         </div>
       ))}
+      
+      {/* Overlay */}
       {expandedIndex !== null && (
         <div 
-          className="fixed inset-0 bg-black/70 z-40 transition-opacity duration-300"
+          className="fixed inset-0 bg-black/80 z-40 cursor-pointer"
           onClick={() => setExpandedIndex(null)}
         />
       )}
