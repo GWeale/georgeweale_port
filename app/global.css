@@ -170,3 +170,8 @@ table {
 body.image-expanded {
   overflow: hidden;
 }
+
+.main-content {
+  @apply bg-white dark:bg-black rounded-lg shadow-lg p-6;
+}
+
