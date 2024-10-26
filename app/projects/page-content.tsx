@@ -13,7 +13,9 @@ export default function ProjectContent() {
       (!yearFilter || project.year === yearFilter)
     );
 
-  const years = [...new Set(projects.map(p => p.year))].sort((a, b) => b - a);
+  const sortedProjects = projects.sort((a, b) => b.year - a.year);
+  
+  const years = Array.from(new Set(projects.map(p => p.year))).sort((a, b) => b - a);
 
   return (
     <section>
