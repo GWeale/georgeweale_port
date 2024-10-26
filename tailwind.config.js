@@ -16,6 +16,9 @@ module.exports = {
           },
         },
       },
+      colors: {
+        primary: 'var(--primary-color)',
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

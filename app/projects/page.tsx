@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { projects } from "./project-data";
+import { useState } from 'react';
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -8,11 +9,39 @@ export const metadata: Metadata = {
 };
 
 export default function Projects() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [yearFilter, setYearFilter] = useState<number | null>(null);
+
+  const filteredProjects = projects
+    .filter(project => 
+      project.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      (!yearFilter || project.year === yearFilter)
+    );
+
+  const years = [...new Set(projects.map(p => p.year))].sort((a, b) => b - a);
+
   return (
     <section>
+      <div className="mb-8">
+        <input
+          type="text"
+          placeholder="Search projects..."
+          className="p-2 border rounded-md w-full mb-4"
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <select
+          onChange={(e) => setYearFilter(e.target.value ? Number(e.target.value) : null)}
+          className="p-2 border rounded-md"
+        >
+          <option value="">All Years</option>
+          {years.map(year => (
+            <option key={year} value={year}>{year}</option>
+          ))}
+        </select>
+      </div>
       <h1 className="mb-8 text-2xl font-medium tracking-tight">Projects</h1>
       <div className="space-y-6">
-        {projects.map((project, index) => (
+        {filteredProjects.map((project, index) => (
           <a
             key={index}
             href={project.url}
