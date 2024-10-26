@@ -23,7 +23,7 @@ export default function Page() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I am currently a masters student at the Columbia University studying Machine Learning and Bioinformatics. 
-          I did my undergrad at the University of California, Santa Barbara where I got a BS in Chemical Engineering and a BS in Data Science and Statistics.
+          I did my undergrad at the University of California, Santa Barbara where I was awarded a BS in Chemical Engineering and a BS in Data Science and Statistics.
         </p>
         <p>
           This portfolio includes some of the projects I am most proud of, and photos along the way. 
