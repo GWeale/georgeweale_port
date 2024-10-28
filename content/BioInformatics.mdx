@@ -1,58 +1,15 @@
 ---
 title: "Goal of Bioinformatics"
-publishedAt: "2024-08-13"
+publishedAt: "2024-10-13"
 summary: "My thoughts on the goal of Bioinformatics."
 tags: "Bioinformatics"
 ---
 
 
-# Integrating Multimodal Data for Personalized Therapeutics
+The goal is to input data from a diagnosis, such as blood tests with specific markers, or use a multimodal approach that captures various aspects of a presenting phenotype. A black box model can then predict a combination of drugs and therapeutics to address the problem associated with the phenotype.
 
-## Objective
+Biology aims to provide the black box with extensive, multimodal information to enhance its accuracy for each cell type in an individual, making the approach personalized. However, constructing different models for each person poses a challenge. Machine learning and deep learning models have been used to train on populations and make individual predictions, but these models often fail to generalize to individuals, relying instead on population-based predictions.
 
-Develop a system that integrates diagnostic inputs, such as blood test markers and multimodal phenotypic data, into a predictive model. The model aims to recommend drug cocktails and therapeutic interventions tailored to individual phenotypes.
+Future bioinformatics should focus on integrating all available information to predict at an individual level. Beyond prediction, the field needs to synthesize data from various modalities to create a comprehensive storyline for each patient. Viewing each patient as a time series model with synthesized data for each modality can provide a detailed narrative. This approach contrasts with targeting single genes based on presenting phenotypes, which has not achieved the desired outcomes despite numerous attempts with single-cell inference models.
 
-## Current Approaches
-
-- **Black Box Models**: Utilize machine learning and deep learning to process extensive multimodal data, including various cell types and biomarkers, to make predictions.
-  
-- **Population-Based Models**: Train models on large datasets representing diverse populations to generalize predictions to individuals.
-
-## Challenges
-
-- **Personalization**: Existing models struggle to generalize predictions to individual patients, as they are primarily trained on population-level data.
-  
-- **Model Construction**: Creating separate models for each individual is impractical due to computational and data constraints.
-  
-- **Single-Gene Targeting**: Approaches targeting individual genes based on phenotypes have shown limited effectiveness in therapeutic outcomes.
-
-## Future Directions in Bioinformatics
-
-- **Individual-Level Predictions**: Develop models capable of making accurate predictions for individual patients by leveraging comprehensive multimodal data.
-  
-- **Data Synthesis**: Integrate data from various modalities to construct a detailed patient-specific narrative, enhancing the model's predictive capabilities.
-  
-- **Time Series Modeling**: Treat each patient as a time series, synthesizing data across different modalities to capture the temporal dynamics of their condition.
-
-## Proposed Solution
-
-1. **Multimodal Data Integration**: Collect and integrate diverse data types, including blood markers, imaging, and genomic information, to provide a comprehensive view of the patient's phenotype.
-   
-2. **Black Box Optimization**: Enhance the accuracy of black box models by feeding them extensive, multimodal data tailored to each cell type within the patient.
-   
-3. **Patient-Specific Storyline**: Develop a narrative framework for each patient, incorporating data from all body parts and modalities to inform therapeutic decisions.
-   
-4. **Synthesis of Time Series Data**: Implement a time series approach to model the progression of the patient's condition, allowing for dynamic and personalized treatment strategies.
-
-## Conclusion
-
-The final goal is to orchestrate a time series story. Advancing bioinformatics requires the ability to integrate and synthesize multimodal data to make accurate, individualized predictions. Moving beyond population-based models and single-gene targets, the field should focus on creating comprehensive patient-specific narratives through time series modeling and extensive data integration.
-
-## References
-
-- Johnson, A., & Lee, B. (2021). Population-Based Machine Learning Models in Personalized Medicine. *Journal of Biomedical Informatics*, 115, 103678.
-- Martinez, C., et al. (2020). Limitations of Single-Gene Targeting in Therapeutic Development. *Nature Medicine*, 26(5), 800-807.
-- Nguyen, D., et al. (2023). Challenges in Individualized Predictive Modeling. *Bioinformatics Today*, 39(2), 150-160.
-- Patel, R., & Kumar, S. (2024). Future Directions in Bioinformatics for Personalized Therapy. *Computational Biology*, 45(1), 22-35.
-- Smith, J., et al. (2022). Black Box Models for Multimodal Data Integration. *Artificial Intelligence in Medicine*, 112, 102345.
-- Zhang, Y., et al. (2023). Time Series Approaches in Patient-Specific Modeling. *IEEE Transactions on Biomedical Engineering*, 70, 1234-1245.
+Each patient requires a storyline that encompasses all body parts and the different modalities present. This comprehensive approach will improve the accuracy and effectiveness of personalized treatments.
