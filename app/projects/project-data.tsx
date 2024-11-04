@@ -19,7 +19,7 @@ export const projects: Project[] = [
     year: 2024,
     description:
       "Delivered a full stack development of an AI meal tracking app for use by highschool sports teams and local nutritionist centers to quantitatively assess food cataloging, adopted by Los Altos High Football Team. Pytorch, YOLOv8, AWS",
-
+    url: "https://earlibird.work/en"
   },
   {
     title: "Senior Design 2 - UCSB ",
