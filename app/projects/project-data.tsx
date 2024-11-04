@@ -11,7 +11,7 @@ export const projects: Project[] = [
     title: "Pico Size Chatbot",
     year: 2024,
     description:
-      "Built a chatbot from scratch only using Pytorch and numpy. Trained on school cluster.",
+      "Built a chatbot for you to ask about my experience in different projects and jobs. I built this from scratch only using Pytorch, numpy, and AWS. Trained on school cluster.",
 
   },
   {

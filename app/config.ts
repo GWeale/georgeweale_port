@@ -12,5 +12,5 @@ export const socialLinks = {
   github: "https://github.com/GWeale",
   instagram: "https://www.instagram.com/g.weale/",
   linkedin: "https://www.linkedin.com/georgeweale/",
-  email: "mailto:gmw2143@gmail.com",
+  email: "mailto:george.weale@columbia.edu",
 };
