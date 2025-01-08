@@ -8,6 +8,13 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Time Series Prediction",
+    year: 2024,
+    description:
+      "Our project enhances the LSTM-FCN architecture for time series classification, incorporating modifications like SE blocks, achieving improved performance across datasets compared to replication models.",
+    pdf: "/pdfs/LSTM_FCN.pdf"
+  },
+  {
     title: "Pico Size Chatbot",
     year: 2024,
     description:
@@ -39,14 +46,14 @@ export const projects: Project[] = [
     title: "EarliBird - UCSB New Venture Incubator",
     year: 2023,
     description:
-      "Led development of a neural network-driven process for two system chemical plants using tensorflow, utilizing stochastic modeling and aspens equations of state to optimize plant cost, developed DLMPC package on Matlab",
+      "Developed a natural language processes system using tensorflow uses the existing cash registers to optimize store item placement and supply chain restocking, while reducing upfront costs by 200x than cloud business",
 
   },
   {
     title: "SeePrint - UCSB New Venture Incubator",
     year: 2022,
     description:
-      "Developed a natural language processes system using tensorflow uses the existing cash registers to optimize store item placement and supply chain restocking, while reducing upfront costs by 200x than cloud business",
+      "Developed neural netowrk system to optimize OSIsoft PI, and lead Scrum, I modled the schimal process with Python and Aspen Dynamics",
 
   },
 ];
