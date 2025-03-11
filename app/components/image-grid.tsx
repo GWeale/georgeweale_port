@@ -9,14 +9,14 @@ interface ImageGridProps {
     alt: string;
     href?: string;
   }[];
-  columns?: 2 | 3 | 4; // Accepts 2, 3, or 4 columns
-  showCaption?: boolean; // Add this prop
+  columns?: 2 | 3 | 4;
+  showCaption?: boolean; 
 }
 
 export const ImageGrid: React.FC<ImageGridProps> = ({
   images,
   columns = 3,
-  showCaption = false, // Default to false for backward compatibility
+  showCaption = false,
 }) => {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 

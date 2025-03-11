@@ -4,7 +4,7 @@ import { socialLinks } from "./config";
 export default function Page() {
   return (
     <section>
-      <a href={socialLinks.twitter} target="_blank">
+      <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
         <Image
           src="/profile.png"
           alt="Profile photo"
@@ -32,21 +32,11 @@ export default function Page() {
             target="_blank"
             href="https://github.com/GWeale/georgeweale_port"
             className="ml-1"
+            rel="noopener noreferrer"
           >
             here
           </a>
           .
-        </p>
-        <p>
-          I recently built a pico scale chatbot hosted on AWS. Interact with it to learn about my research, work, and projects. Check it out
-          <a
-            target="_blank"
-            href="georgeweale.com/chatbot"
-            className="ml-1"
-          >
-            here
-          </a>
-          !
         </p>
       </div>
     </section>
