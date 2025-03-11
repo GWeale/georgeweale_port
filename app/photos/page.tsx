@@ -28,10 +28,6 @@ export default function Photos() {
             alt: "Senior Design Project Presentation"
           },
           {
-            src: "/photos/photo4.png",
-            alt: "First arduino circuit"
-          },
-          {
             src: "/photos/photo5.png",
             alt: "Professor Bowers!"
           },
