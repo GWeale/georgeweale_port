@@ -25,8 +25,7 @@ export const projects: Project[] = [
     title: "MealMapper - Columbia Startup Lab",
     year: 2024,
     description:
-      "Delivered a full stack development of an AI meal tracking app for use by highschool sports teams and local nutritionist centers to quantitatively assess food cataloging, adopted by Los Altos High Football Team. Pytorch, YOLOv8, AWS",
-    url: "https://earlibird.work/en"
+      "Engineered an AI-powered meal tracking application, implementing computer vision models (PyTorch, YOLOv8) for automated food recognition and nutritional estimation from images. Deployed the deep learning system on GCP for use by sports team nutritionists.",
   },
   {
     title: "Senior Design 2 - UCSB ",
@@ -43,17 +42,17 @@ export const projects: Project[] = [
     pdf: "/pdfs/ThermalCracking.pdf",
   },
   {
-    title: "EarliBird - UCSB New Venture Incubator",
-    year: 2023,
-    description:
-      "Developed a natural language processes system using tensorflow uses the existing cash registers to optimize store item placement and supply chain restocking, while reducing upfront costs by 200x than cloud business",
-
-  },
-  {
     title: "SeePrint - UCSB New Venture Incubator",
     year: 2022,
     description:
-      "Developed neural netowrk system to optimize OSIsoft PI, and lead Scrum, I modled the schimal process with Python and Aspen Dynamics",
+      "Developed and deployed neural network systems on AWS to optimize OSIsoft PI process control, achieving up to 20% efficiency gains. Implemented data pipelines integrating plant sensor data for cloud-based analytics and model training/validation.",
 
   },
+  {
+    title: "EarliBird - UCSB New Venture Incubator",
+    year: 2021,
+    description:
+      "Developed a TensorFlow-based natural language processing system, including custom tokenization, to analyze transaction patterns for optimizing retail store item placement and supply chain logistics, significantly reducing operational costs compared to cloud alternatives.",
+
+  }
 ];
