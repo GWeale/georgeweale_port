@@ -22,21 +22,9 @@ export default function Page() {
 
       <div className="prose prose-neutral dark:prose-invert">
         <p>
+          I am going to be joining Google this summer as a Software Engineer working on Machine Learning and Cloud Ai.
           I am currently a masters student at the Columbia University studying Machine Learning and Bioinformatics in Professor Kam Leong's Lab. 
           I did my undergrad at the University of California, Santa Barbara where I obtained a BS in Chemical Engineering and a BS in Data Science and Statistics.
-        </p>
-        <p>
-          This portfolio includes some of the projects I am most proud of, and photos along the way. 
-          I built this website using Next.js, and Tailwind CSS, shown
-          <a
-            target="_blank"
-            href="https://github.com/GWeale/georgeweale_port"
-            className="ml-1"
-            rel="noopener noreferrer"
-          >
-            here
-          </a>
-          .
         </p>
       </div>
     </section>
