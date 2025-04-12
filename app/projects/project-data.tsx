@@ -18,7 +18,7 @@ export const projects: Project[] = [
     title: "Pico Size Chatbot",
     year: 2024,
     description:
-      "Built a chatbot for you to ask about my experience in different projects and jobs. I built this from scratch only using Pytorch, numpy, and AWS. Trained on school cluster.",
+      "Built a chatbot for you to ask about my experience in different projects and jobs. I built this from scratch (similar to GPT 2 paper) on AWS. Trained on school cluster.",
 
   },
   {
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Senior Design 2 - UCSB ",
     year: 2024,
     description:
-      "I developed a conceptual process design and conducted an analysis for a carbon-negative dimethyl carbonate (DMC) plant, including the evaluation of equipment and economic factors. After optimizing the design, I found profitability improvements, by leveraging carbon credits in the European market.",
+      "I developed a process design and conducted an analysis for a carbon-negative dimethyl carbonate (DMC) plant, including the evaluation of equipment and economic factors. After optimizing the design, I found profitability improvements, by leveraging carbon credits in the European market.",
     pdf: "/pdfs/DMCProduction.pdf",
   },
   {
